@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <title>Register</title>
   </head>
   <body>
     <header id="header">
@@ -23,39 +23,29 @@
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </header>
-    <main>
-      <sec id="news" class="grid">
-        <div class="cards">
-          <h2 class="title">Title</h2>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, illo
-            sunt. Harum facilis fuga fugit, voluptatem possimus omnis
-            blanditiis, odit ad cumque animi, pariatur veritatis necessitatibus
-            quidem at consectetur. Numquam?
-          </p>
-          <a href="#" class="open-news-button">Button</a>
+    <main class="main">
+      <div class="register">
+        <input
+          type="text"
+          placeholder="Title"
+          class="register-title"
+          autofocus
+          required
+        />
+        <textarea
+          type="text"
+          class="register-text"
+          maxlength="500"
+          cols="40"
+          placeholder="Text"
+          required
+        >
+        </textarea>
+        <div class="button-save-cancel">
+          <button class="save">SAVE</button>
+          <button class="cancel">CANCEL</button>
         </div>
-        <div class="cards">
-          <h2 class="title">Title</h2>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, illo
-            sunt. Harum facilis fuga fugit, voluptatem possimus omnis
-            blanditiis, odit ad cumque animi, pariatur veritatis necessitatibus
-            quidem at consectetur. Numquam?
-          </p>
-          <a href="#" class="open-news-button">Button</a>
-        </div>
-        <div class="cards">
-          <h2 class="title">Title</h2>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, illo
-            sunt. Harum facilis fuga fugit, voluptatem possimus omnis
-            blanditiis, odit ad cumque animi, pariatur veritatis necessitatibus
-            quidem at consectetur. Numquam?
-          </p>
-          <a href="#" class="open-news-button">Button</a>
-        </div>
-      </sec>
+      </div>
     </main>
     <footer id="footer">
       <h3>Build by Felipe Santos</h3>
