@@ -3,14 +3,14 @@
 }
 
 :root {
-  --color-header: #00b4d8;
-  --color-logo: #023e8a;
+  --color-dark-blue: #023e8a;
   --color-buttons: #0077b6;
+  --color-header: #00b4d8;
   --color-hover-buttons: #0096c7;
   --color-light: #caf0f8;
-  --color-text: #000000;
   --color-shadow: #48cae4;
   --color-background: #90e0ef;
+  --color-text: #000000;
 }
 
 body {
@@ -27,36 +27,29 @@ body {
   box-shadow: 0px 5px 5px var(--color-shadow);
   transition: all 0.3s ease;
 }
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
 .logo {
   color: var(--color-light);
-  background-color: var(--color-logo);
+  background-color: var(--color-dark-blue);
   width: 10rem;
   text-align: center;
   padding: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   text-decoration: transparent;
+  font-weight: bold;
 }
-
 .logo:hover {
   background-color: var(--color-buttons);
 }
-.buttons {
+.button-register {
   background-color: var(--color-header);
   padding: 0.5rem;
   font-weight: bold;
-}
-
-.button-news {
-  color: var(--color-text);
-  background-color: var(--color-light);
-  padding: 0.5rem;
-  margin-right: 2rem;
-  text-decoration: transparent;
-}
-.button-news:hover {
-  background-color: var(--color-hover-buttons);
-}
-
-.button-register {
   color: var(--color-text);
   background-color: var(--color-light);
   padding: 0.5rem;
@@ -69,6 +62,7 @@ body {
 .search {
   display: flex;
   margin-right: 1rem;
+  margin-left: 0%;
 }
 .search input[type='text'] {
   border: none;
@@ -89,7 +83,7 @@ body {
 .grid {
   display: grid;
   gap: 2rem;
-  margin-top: 2rem;
+  margin: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   transition: all 1s ease;
 }
@@ -126,7 +120,7 @@ body {
 }
 .open-news-button {
   background-color: var(--color-background);
-  border: 3px solid var(--color-logo);
+  border: 3px solid var(--color-dark-blue);
   margin-top: -2%;
   width: 90%;
   height: 50%;
@@ -189,7 +183,7 @@ body {
   font-size: x-large;
   font-weight: bold;
   padding: 0.5rem;
-  border: 3px solid var(--color-logo);
+  border: 3px solid var(--color-dark-blue);
 }
 
 .register-title:focus {
@@ -204,7 +198,7 @@ body {
   font-size: larger;
   padding: 0.5rem;
   outline: none;
-  border: 3px solid var(--color-logo);
+  border: 3px solid var(--color-dark-blue);
 }
 
 .register-text:focus {
@@ -222,7 +216,7 @@ body {
 
 .save {
   color: var(--color-light);
-  background-color: var(--color-logo);
+  background-color: var(--color-dark-blue);
   font-weight: bold;
   font-size: larger;
 }
@@ -238,4 +232,56 @@ body {
 }
 .cancel:hover {
   background-color: var(--color-buttons);
+}
+
+@media only screen and (max-width: 950px) {
+  .logo {
+    width: 7rem;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 6rem;
+  }
+  .main {
+    width: 30rem;
+    height: 30rem;
+    margin: auto;
+    margin-top: 5rem;
+  }
+  .register-title {
+    width: 20rem;
+    height: 3rem;
+  }
+  .register-text {
+    width: 20rem;
+    height: 10rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 6rem;
+  }
+  .main {
+    width: 25rem;
+    height: 25rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .register-title {
+    width: 20rem;
+    height: 3rem;
+  }
+  .register-text {
+    width: 20rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+  }
 }
