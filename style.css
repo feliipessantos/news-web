@@ -25,7 +25,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 5px 5px var(--color-shadow);
-  transition: all 0.3s ease;
+  animation: show-header 1s ease-in forwards;
 }
 
 .buttons {
@@ -45,6 +45,7 @@ body {
 }
 .logo:hover {
   background-color: var(--color-buttons);
+  transform: scale(1.05);
 }
 .button-register {
   background-color: var(--color-header);
@@ -57,6 +58,7 @@ body {
 }
 .button-register:hover {
   background-color: var(--color-hover-buttons);
+  transform: scale(1.05);
 }
 
 .search {
@@ -78,14 +80,14 @@ body {
 }
 
 .search button:hover {
-  transform: translateY(-1px);
+  transform: scale(1.05);
 }
 .grid {
   display: grid;
   gap: 2rem;
   margin: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
-  transition: all 1s ease;
+  animation: grid-animation 1s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
 }
 
 .cards {
@@ -100,6 +102,11 @@ body {
   align-items: center;
   justify-items: center;
   box-shadow: 0px 5px 12px var(--color-shadow);
+}
+
+.cards:hover {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
 }
 
 .title {
@@ -143,7 +150,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 10px 12px var(--color-shadow) inset;
-  transition: all 0.3s ease;
+  animation: show-footer 1.5s ease-in forwards;
 }
 
 .social {
@@ -153,10 +160,13 @@ body {
   justify-content: space-between;
 }
 .social a:hover {
-  transform: translateY(-3px);
+  transform: scale(1.4);
 }
 
-.main {
+.register-box {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
     180deg,
     var(--color-shadow) 66%,
@@ -164,20 +174,16 @@ body {
   );
   width: 60rem;
   height: 30rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   margin-top: 10rem;
-  transition: all 1s ease;
+  animation: grid-animation 0.5s ease-in forwards;
 }
 
-.register {
-  display: grid;
-  justify-content: center;
+.register-box:hover {
+  box-shadow: 0 5px 15px 4px var(--color-shadow);
 }
 
 .register-title {
-  margin-top: 3rem;
   width: 30rem;
   height: 5rem;
   font-size: x-large;
@@ -208,8 +214,6 @@ body {
 }
 
 .button-save-cancel {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
   display: flex;
   justify-content: space-around;
 }
@@ -244,7 +248,7 @@ body {
     margin-right: 2rem;
     margin-bottom: 6rem;
   }
-  .main {
+  .register-box {
     width: 30rem;
     height: 30rem;
     margin: auto;
@@ -268,11 +272,11 @@ body {
     margin-right: 2rem;
     margin-bottom: 6rem;
   }
-  .main {
+  .register-box {
     width: 25rem;
     height: 25rem;
     margin: auto;
-    margin-top: 1.5rem;
+    margin-top: 5rem;
     margin-bottom: 2.5rem;
   }
   .register-title {
@@ -283,5 +287,45 @@ body {
     width: 20rem;
     height: 10rem;
     margin-bottom: 1rem;
+  }
+}
+
+@keyframes grid-animation {
+  0% {
+    opacity: 0;
+    bottom: -25px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes show-header {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+
+@keyframes grid-animation {
+  0% {
+    opacity: 0;
+    bottom: -25px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes show-footer {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
